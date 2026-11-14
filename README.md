@@ -28,7 +28,7 @@ Java 17 · Spring Boot · Spring MVC · Maven · Lombok · HTML
 2. Abrir el formulario: <http://localhost:8080/formulario-crear-pokemon.html>.
 3. Rellenar el formulario y pulsar **Crear Pokemon** para probar `POST /pokemons`.
 4. Visitar <http://localhost:8080/pokemons> para consultar el listado mediante GET.
-5. Para probar PUT y DELETE, utilizar los comandos de las guías de [modificación](documentation/editar.md) y [eliminación](documentation/eliminar.md), y comprobar los parámetros en Debug.
+5. Para probar PUT y DELETE, utilizar los comandos de las guías de [modificación](documentation/editar.md) y [eliminación](documentation/eliminar.md).
 
 ## Arquitectura
 
