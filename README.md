@@ -10,14 +10,16 @@ Este proyecto permite crear Pokémon desde un formulario web y consultar una lis
 
 Java 17 · Spring Boot · Spring MVC · Maven · Lombok · HTML
 
+
 ## Funcionalidades implementadas
 
-- **Crear Pokémon:** formulario HTML que envía una petición `POST /pokemons`.
-- **Listar Pokémon:** petición `GET /pokemons` que muestra tres Pokémon estáticos en HTML.
-- **Modificar Pokémon:** petición `PUT /pokemons/{id}` que recibe el ID y los datos, y devuelve un resultado sin actualizar datos almacenados.
-- **Eliminar Pokémon:** petición `DELETE /pokemons/{id}` que transmite el ID hasta el UseCase y responde con `204 No Content`, sin borrar datos almacenados.
+- **Crear Pokémon:** formulario HTML mediante `POST /pokemons`, con validación de datos.
+- **Listar Pokémon:** `GET /pokemons` muestra los Pokémon almacenados en el repositorio.
+- **Modificar Pokémon:** `PUT /pokemons/{id}` actualiza los datos de un Pokémon existente.
+- **Eliminar Pokémon:** `DELETE /pokemons/{id}` elimina un Pokémon y devuelve `204 No Content`.
 
-> **Estado actual:** los Pokémon creados no se almacenan en una base de datos sino en la memoria RAM. La lista de ejemplo se genera de nuevo en cada petición GET. 
+> **Almacenamiento:** `PokemonRepositoryMockImpl` utiliza un `Map` en memoria. Los cambios se mantienen durante la ejecución, pero no se conservan al reiniciar la aplicación.
+
 
 
 ## Ejecutar el proyecto

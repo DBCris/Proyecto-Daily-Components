@@ -28,3 +28,11 @@ La aplicación se divide de forma jerárquica desde el núcleo hasta el exterior
 
 * **Qué es:** Es la capa que conecta nuestra aplicación con el mundo exterior.
 * **Cómo se usa:** Recibe las peticiones HTTP del cliente a través del controlador (PokemonController), transforma los datos usando el Mapper y delega en los servicios de aplicación.
+
+* **Repository:** `PokemonRepository` define la interfaz en `domain`, mientras que `PokemonRepositoryMockImpl` la implementa en `infraestructure` utilizando un `Map` en memoria. Los casos de uso dependen de la interfaz, no de su implementación.
+
+* **Mapper:** `PokemonMapper` utiliza MapStruct para convertir los DTO en comandos y objetos de respuesta.
+
+* **Validaciones:** `PokemonRequest` utiliza `@NotBlank`, `@NombradoPokemon`, `@Min` y `@Max` para validar el nombre (obligatorio y sin espacios ni saltos de línea), el tipo (obligatorio) y el precio (entre 0 y 100). Las validaciones se activan mediante `@Valid` en POST y PUT, y los mensajes se definen en `messages.properties`.
+
+

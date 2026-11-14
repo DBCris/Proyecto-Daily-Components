@@ -11,7 +11,7 @@ La petición identifica el Pokémon que queremos eliminar mediante un parámetro
 Iniciar `StoreApplication.java` y ejecutar:
 
 ```bash
-curl -i -X DELETE http://localhost:8080/pokemons/5
+curl -i -X DELETE http://localhost:8080/pokemons/2
 ```
 
 ## Alternativa: formulario HTML
