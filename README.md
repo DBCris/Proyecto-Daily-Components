@@ -4,7 +4,7 @@
 
 Este proyecto permite crear Pokémon desde un formulario web y consultar una lista de tres Pokémon de ejemplo. También incluye rutas para probar la modificación y eliminación de Pokémon. El objetivo de la práctica es aplicar una organización modular con **Vertical Slicing** y la separación de responsabilidades de **Clean Architecture**.
 
-<img src = "documentation/images/pokemart.png">
+<img src = "documentation/images/dailyComponents.jpg">
 
 ## Tecnologías
 
