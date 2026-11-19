@@ -2,26 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Nuevo Pokemon</title>
+    <title>Nuevo Ordenador</title>
 </head>
 <body>
-    <h1>Crear Pokemon</h1>
+    <h1>Crear Ordenador</h1>
 
-    <form action="/pokemons" method="post">
+    <form action="/ordenadores" method="post">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required>
         <br><br>
 
         <label for="tipo">Tipo:</label>
         <select id="tipo" name="tipo" required>
-            <option value="">-- Selecciona un tipo --</option>
-            <option value="Fuego">Fuego</option>
-            <option value="Agua">Agua</option>
-            <option value="Planta">Planta</option>
-            <option value="Eléctrico">Eléctrico</option>
-            <option value="Roca">Roca</option>
-            <option value="Psíquico">Psíquico</option>
-            <option value="Normal">Normal</option>
+            <option value="">-- Selecciona un tipo de ordenador--</option>
+            <option value="Sobremesa">Sobremesa</option>
+            <option value="Portátil">Portátil</option>
         </select>
         <br><br>
 
@@ -34,7 +29,7 @@
                step="0.01" min="0" required>
         <br><br>
 
-        <button type="submit">Crear Pokemon</button>
+        <button type="submit">Crear Ordenador</button>
     </form>
 </body>
 </html>

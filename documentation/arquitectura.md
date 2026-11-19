@@ -16,23 +16,23 @@ La aplicación se divide de forma jerárquica desde el núcleo hasta el exterior
 
 ### A. Capa de Dominio (domain)
 
-* **Qué es:** Es el corazón de nuestra aplicación. Contiene las entidades puras del negocio (la clase Pokemon).
+* **Qué es:** Es el corazón de nuestra aplicación. Contiene las entidades puras del negocio (la clase Ordenador).
 * **Por qué:** No sabe nada de bases de datos, ni de páginas web, ni de Spring. Solo define las reglas y datos básicos de un Pokémon.
 
 ### B. Capa de Aplicación (application)
 
-* **Qué es:** Contiene la lógica de los casos de uso de la aplicación, los servicios y los comandos (CreatePokemonUseCase, CreatePokemonService, CreatePokemonCommand).
+* **Qué es:** Contiene la lógica de los casos de uso de la aplicación, los servicios y los comandos (CreateOrdenadorUseCase, CreateOrdenadorService, CreateOrdenadorCommand).
 * **Cómo se usa:** Utiliza el *Patrón Command* para encapsular los datos que entran y orquesta las operaciones que puede hacer el usuario (como crear o listar Pokémon).
 
 ### C. Capa de Infraestructura (infraestructure)
 
 * **Qué es:** Es la capa que conecta nuestra aplicación con el mundo exterior.
-* **Cómo se usa:** Recibe las peticiones HTTP del cliente a través del controlador (PokemonController), transforma los datos usando el Mapper y delega en los servicios de aplicación.
+* **Cómo se usa:** Recibe las peticiones HTTP del cliente a través del controlador (OrdenadorController), transforma los datos usando el Mapper y delega en los servicios de aplicación.
 
-* **Repository:** `PokemonRepository` define la interfaz en `domain`, mientras que `PokemonRepositoryMockImpl` la implementa en `infraestructure` utilizando un `Map` en memoria. Los casos de uso dependen de la interfaz, no de su implementación.
+* **Repository:** `OrdenadorRepository` define la interfaz en `domain`, mientras que `OrdenadorRepositoryMockImpl` la implementa en `infraestructure` utilizando un `Map` en memoria. Los casos de uso dependen de la interfaz, no de su implementación.
 
-* **Mapper:** `PokemonMapper` utiliza MapStruct para convertir los DTO en comandos y objetos de respuesta.
+* **Mapper:** `OrdenadorMapper` utiliza MapStruct para convertir los DTO en comandos y objetos de respuesta.
 
-* **Validaciones:** `PokemonRequest` utiliza `@NotBlank`, `@NombradoPokemon`, `@Min` y `@Max` para validar el nombre (obligatorio y sin espacios ni saltos de línea), el tipo (obligatorio) y el precio (entre 0 y 100). Las validaciones se activan mediante `@Valid` en POST y PUT, y los mensajes se definen en `messages.properties`.
+* **Validaciones:** `OrdenadorRequest` utiliza `@NotBlank`, `@NombradoOrdenador`, `@Min` y `@Max` para validar el nombre (obligatorio y sin espacios ni saltos de línea), el tipo (obligatorio) y el precio (entre 0 y 100). Las validaciones se activan mediante `@Valid` en POST y PUT, y los mensajes se definen en `messages.properties`.
 
 
