@@ -1,4 +1,4 @@
-# Tienda Pokémon - Pokemart
+# Tienda de componentes - Daily-Components
 
 ## 1. Arquitectura del Proyecto (¿Qué estructura utilizamos y por qué?)
 
@@ -7,7 +7,7 @@ Para este proyecto hemos decidido implementar una *Arquitectura en Capas inspira
 ### ¿Por qué utilizamos esta estructura?
 
 * **Separación de responsabilidades:** Cada parte de la aplicación tiene una función. Si cambia la base de datos o cambia la interfaz web, el núcleo del negocio no sufre modificaciones.
-* **Mantenibilidad y Escalabilidad:** Si mañana queremos cambiar la página HTML por una API REST o conectar una base de datos real, el núcleo de nuestro negocio (el Pokémon) no sufrirá modificaciones.
+* **Mantenibilidad y Escalabilidad:** Si mañana queremos cambiar la página HTML por una API REST o conectar una base de datos real, el núcleo de nuestro negocio (el componente) no sufrirá modificaciones.
 * **Desacoplamiento:** La capa Domain no depende de frameworks externos como Spring Boot ni de las librerías propias de la infraestructura.
 
 ## 2. Organización de Capas (¿Cómo se divide y cómo se usa?)
@@ -16,23 +16,23 @@ La aplicación se divide de forma jerárquica desde el núcleo hasta el exterior
 
 ### A. Capa de Dominio (domain)
 
-* **Qué es:** Es el corazón de nuestra aplicación. Contiene las entidades puras del negocio (la clase Ordenador).
-* **Por qué:** No sabe nada de bases de datos, ni de páginas web, ni de Spring. Solo define las reglas y datos básicos de un Pokémon.
+* **Qué es:** Es el corazón de nuestra aplicación. Contiene las entidades puras del negocio (la clase Componente).
+* **Por qué:** No sabe nada de bases de datos, ni de páginas web, ni de Spring. Solo define las reglas y datos básicos de un componente.
 
 ### B. Capa de Aplicación (application)
 
-* **Qué es:** Contiene la lógica de los casos de uso de la aplicación, los servicios y los comandos (CreateOrdenadorUseCase, CreateOrdenadorService, CreateOrdenadorCommand).
-* **Cómo se usa:** Utiliza el *Patrón Command* para encapsular los datos que entran y orquesta las operaciones que puede hacer el usuario (como crear o listar Pokémon).
+* **Qué es:** Contiene la lógica de los casos de uso de la aplicación, los servicios y los comandos (CreateComponenteUseCase, CreateComponenteService, CreateComponenteCommand).
+* **Cómo se usa:** Utiliza el *Patrón Command* para encapsular los datos que entran y orquesta las operaciones que puede hacer el usuario (como crear o listar componente).
 
 ### C. Capa de Infraestructura (infraestructure)
 
 * **Qué es:** Es la capa que conecta nuestra aplicación con el mundo exterior.
-* **Cómo se usa:** Recibe las peticiones HTTP del cliente a través del controlador (OrdenadorController), transforma los datos usando el Mapper y delega en los servicios de aplicación.
+* **Cómo se usa:** Recibe las peticiones HTTP del cliente a través del controlador (ComponenteController), transforma los datos usando el Mapper y delega en los servicios de aplicación.
 
-* **Repository:** `OrdenadorRepository` define la interfaz en `domain`, mientras que `OrdenadorRepositoryMockImpl` la implementa en `infraestructure` utilizando un `Map` en memoria. Los casos de uso dependen de la interfaz, no de su implementación.
+* **Repository:** `ComponenteRepository` define la interfaz en `domain`, mientras que `ComponenteRepositoryMockImpl` la implementa en `infraestructure` utilizando un `Map` en memoria. Los casos de uso dependen de la interfaz, no de su implementación.
 
-* **Mapper:** `OrdenadorMapper` utiliza MapStruct para convertir los DTO en comandos y objetos de respuesta.
+* **Mapper:** `ComponenteMapper` utiliza MapStruct para convertir los DTO en comandos y objetos de respuesta.
 
-* **Validaciones:** `OrdenadorRequest` utiliza `@NotBlank`, `@NombradoOrdenador`, `@Min` y `@Max` para validar el nombre (obligatorio y sin espacios ni saltos de línea), el tipo (obligatorio) y el precio (entre 0 y 100). Las validaciones se activan mediante `@Valid` en POST y PUT, y los mensajes se definen en `messages.properties`.
+* **Validaciones:** `ComponenteRequest` utiliza `@NotBlank`, `@NombradoComponente`, `@Min` y `@Max` para validar el nombre (obligatorio y sin espacios ni saltos de línea), el tipo (obligatorio) y el precio (entre 0 y 6000). Las validaciones se activan mediante `@Valid` en POST y PUT, y los mensajes se definen en `messages.properties`.
 
 

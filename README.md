@@ -1,10 +1,10 @@
-# Pokémart
+# Daily-Components
 
-**Aplicación web de gestión de Pokémon, desarrollada con Java y Spring Boot.**
+**Aplicación web de gestión de componentes, desarrollada con Java y Spring Boot.**
 
-Este proyecto permite crear Pokémon desde un formulario web y consultar una lista de tres Pokémon de ejemplo. También incluye rutas para probar la modificación y eliminación de Pokémon. El objetivo de la práctica es aplicar una organización modular con **Vertical Slicing** y la separación de responsabilidades de **Clean Architecture**.
+Este proyecto permite crear componente desde un formulario web y consultar una lista de tres componente de ejemplo. También incluye rutas para probar la modificación y eliminación de componente. El objetivo de la práctica es aplicar una organización modular con **Vertical Slicing** y la separación de responsabilidades de **Clean Architecture**.
 
-<img src="documentation/ordenador/images/pokemart.png">
+<img src="documentation/componente/images/dailyComponents.jpg">
 
 ## Tecnologías
 
@@ -13,26 +13,26 @@ Java 17 · Spring Boot · Spring MVC · Maven · Lombok · HTML
 
 ## Funcionalidades implementadas
 
-- **Crear Pokémon:** formulario HTML mediante `POST /ordenadores`, con validación de datos.
-- **Listar Pokémon:** `GET /ordenadores` muestra los Pokémon almacenados en el repositorio.
-- **Modificar Pokémon:** `PUT /ordenadores/{id}` actualiza los datos de un Pokémon existente.
-- **Eliminar Pokémon:** `DELETE /ordenadores/{id}` elimina un Pokémon y devuelve `204 No Content`.
+- **Crear componente:** formulario HTML mediante `POST /componentes`, con validación de datos.
+- **Listar componente:** `GET /componentes` muestra los componentes almacenados en el repositorio.
+- **Modificar componente:** `PUT /componentes/{id}` actualiza los datos de un componente existente.
+- **Eliminar componente:** `DELETE /componentes/{id}` elimina un componente y devuelve `204 No Content`.
 
-> **Almacenamiento:** `OrdenadorRepositoryMockImpl` utiliza un `Map` en memoria. Los cambios se mantienen durante la ejecución, pero no se conservan al reiniciar la aplicación.
+> **Almacenamiento:** `ComponenteRepositoryMockImpl` utiliza un `Map` en memoria. Los cambios se mantienen durante la ejecución, pero no se conservan al reiniciar la aplicación.
 
 
 
 ## Ejecutar el proyecto
 
 1. Abrir el proyecto en el IDE y ejecutar la clase `StoreApplication.java` (o ejecutar `sh ./mvnw spring-boot:run` en Linux; `mvnw.cmd spring-boot:run` en Windows).
-2. Abrir el formulario: <http://localhost:8080/formulario-crear-ordenador.html>.
-3. Rellenar el formulario y pulsar **Crear Ordenador** para probar `POST /ordenadores`.
-4. Visitar <http://localhost:8080/ordenadores> para consultar el listado mediante GET.
-5. Para probar PUT y DELETE, utilizar los comandos de las guías de [modificación](documentation/ordenador/editar.md) y [eliminación](documentation/ordenador/eliminar.md).
+2. Abrir el formulario: <http://localhost:8080/formulario-crear-componente.html>.
+3. Rellenar el formulario y pulsar **Crear Componente** para probar `POST /componentes`.
+4. Visitar <http://localhost:8080/componentes> para consultar el listado mediante GET.
+5. Para probar PUT y DELETE, utilizar los comandos de las guías de [modificación](documentation/componente/editar.md) y [eliminación](documentation/componente/eliminar.md).
 
 ## Arquitectura
 
-El módulo **Pokémon** agrupa la funcionalidad relacionada con este recurso (**Vertical Slicing**) y se organiza en tres capas:
+El módulo **componente** agrupa la funcionalidad relacionada con este recurso (**Vertical Slicing**) y se organiza en tres capas:
 
 ```mermaid
 flowchart LR
@@ -45,8 +45,8 @@ Las flechas representan las dependencias principales entre capas, no el orden ex
 ## Documentación
 
 - [Arquitectura y decisiones de diseño](documentation/arquitectura.md)
-- [Creación de Pokémon — POST](documentation/ordenador/crear.md)
-- [Listado de Pokémon — GET](documentation/ordenador/listar.md)
-- [Modificación de Pokémon — PUT](documentation/ordenador/editar.md)
-- [Eliminación de Pokémon — DELETE](documentation/ordenador/eliminar.md)
+- [Creación de componente — POST](documentation/componente/crear.md)
+- [Listado de componente — GET](documentation/componente/listar.md)
+- [Modificación de componente — PUT](documentation/componente/editar.md)
+- [Eliminación de componente — DELETE](documentation/componente/eliminar.md)
 - [Manejo de excepciones de otros slices](documentation/gestion-errores.md)
