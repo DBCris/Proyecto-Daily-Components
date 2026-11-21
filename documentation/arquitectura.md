@@ -33,6 +33,6 @@ La aplicación se divide de forma jerárquica desde el núcleo hasta el exterior
 
 * **Mapper:** `ComponenteMapper` utiliza MapStruct para convertir los DTO en comandos y objetos de respuesta.
 
-* **Validaciones:** `ComponenteRequest` utiliza `@NotBlank`, `@NombradoComponente`, `@Min` y `@Max` para validar el nombre (obligatorio y sin espacios ni saltos de línea), el tipo (obligatorio) y el precio (entre 0 y 6000). Las validaciones se activan mediante `@Valid` en POST y PUT, y los mensajes se definen en `messages.properties`.
+* **Validaciones:** `ComponenteRequest` utiliza `@NotBlank`, `@NombradoComponente`, `@Min` y `@Max` para validar el nombre (obligatorio, permite espacios entre palabras y no admite saltos de línea), el tipo (obligatorio) y el precio (entre 0 y 6000). Las validaciones se activan mediante `@Valid` en POST y PUT, y los mensajes se definen en `messages.properties`.
 
 

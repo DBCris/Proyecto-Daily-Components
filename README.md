@@ -43,7 +43,7 @@ flowchart LR
 Las flechas representan las dependencias principales entre capas, no el orden exacto de ejecución de las peticiones.
 
 ## Documentación
-
+- [Información del proyecto](documentation/proyecto.md)
 - [Arquitectura y decisiones de diseño](documentation/arquitectura.md)
 - [Creación de componente — POST](documentation/componente/crear.md)
 - [Listado de componente — GET](documentation/componente/listar.md)
