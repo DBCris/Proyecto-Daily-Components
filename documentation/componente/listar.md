@@ -6,7 +6,7 @@ El listado inicial muestra tres componentes de ejemplo: Lenovo, Forgeon y Window
 
 1. Iniciar `StoreApplication.java`.
 2. Abrir <http://localhost:8080/componentes>.
-3. El Controller devuelve una página HTML con los tres componente.
+3. El Controller devuelve una página HTML con los tres componentes.
 
 <img src="./images/listaComponentes.png">
 

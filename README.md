@@ -2,13 +2,13 @@
 
 **Aplicación web de gestión de componentes, desarrollada con Java y Spring Boot.**
 
-Este proyecto permite crear componente desde un formulario web y consultar una lista de tres componente de ejemplo. También incluye rutas para probar la modificación y eliminación de componente. El objetivo de la práctica es aplicar una organización modular con **Vertical Slicing** y la separación de responsabilidades de **Clean Architecture**.
+Este proyecto permite crear, consultar, modificar y eliminar componentes informáticos. Incluye tres componentes de ejemplo para probar la aplicación. También incluye rutas para probar la modificación y eliminación de componente. El objetivo de la práctica es aplicar una organización modular con **Vertical Slicing** y la separación de responsabilidades de **Clean Architecture**.
 
 <img src="documentation/componente/images/dailyComponents.jpg">
 
 ## Tecnologías
 
-Java 17 · Spring Boot · Spring MVC · Maven · Lombok · HTML
+Java 17 · Spring Boot 4.1.1 · Spring MVC · Maven · MapStruct 1.6.3 · Lombok · HTML
 
 
 ## Funcionalidades implementadas
