@@ -47,6 +47,11 @@ Uno de los problemas fue la validación del nombre, ya que al principio no permi
 También hemos ampliado las opciones del formulario para poder seleccionar distintos tipos de componentes, como CPU, GPU o RAM.
 
 
-## 6. Fuentes consultadas
+## 6. Conclusiones individuales
+
+### Jieke Zhuang
+Por ahora tenemos las funciones básicas, pero me gustaría que en el futuro todas las operaciones se pudieran hacer directamente desde la página web.
+
+## 7. Fuentes consultadas
 
 - Material de clase sobre desarrollo de aplicaciones web con Java y Spring Boot.
