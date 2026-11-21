@@ -6,5 +6,5 @@ El slice `common` permite manejar las excepciones de otros slices (como componen
 flowchart LR
     P[Slice componente<br/>Manejar datos de los componentes] --> E
     E[Slice common<br/>Gestionar excepciones de otros slices]
-    T[Slice Licencia<br/>Futuro] -.-> E
+    T[Slice Licencia<br/>Futuro] ---> E
 ```

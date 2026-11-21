@@ -50,8 +50,13 @@ También hemos ampliado las opciones del formulario para poder seleccionar disti
 ## 6. Conclusiones individuales
 
 ### Jieke Zhuang
+
 Por ahora tenemos las funciones básicas, pero me gustaría que en el futuro todas las operaciones se pudieran hacer directamente desde la página web.
 
+
+### Cristian David Anghel
+
+Una vez que dominas como se usa vertical slicing con clean architecture es un patrón que ayuda a la estructura de las clases.
 ## 7. Fuentes consultadas
 
 - Material de clase sobre desarrollo de aplicaciones web con Java y Spring Boot.

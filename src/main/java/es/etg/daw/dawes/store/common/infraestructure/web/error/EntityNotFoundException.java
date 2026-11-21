@@ -1,4 +1,4 @@
-package es.etg.daw.dawes.store.componente.domain.error.EntityNotFoundException;
+package es.etg.daw.dawes.store.common.infraestructure.web.error;
 
 public class EntityNotFoundException extends RuntimeException{
 

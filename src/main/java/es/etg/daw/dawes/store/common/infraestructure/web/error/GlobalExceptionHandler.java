@@ -27,6 +27,18 @@ public class GlobalExceptionHandler {
                 .body(html);
 	}
 
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<String> entityNotFoundHandler(EntityNotFoundException ex) {
+        return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage());
+    }
+
+    private ResponseEntity<String> buildResponse(HttpStatus status, String msg) {
+        CustomResponse cr = new CustomResponse(LocalDateTime.now(), status, msg);
+        return ResponseEntity
+                .status(status)
+                .contentType(MediaType.TEXT_HTML)
+                .body(buildErrorHtml(cr));
+    }
     private String buildErrorHtml(CustomResponse cr) {
         return """
                 <!DOCTYPE html>
