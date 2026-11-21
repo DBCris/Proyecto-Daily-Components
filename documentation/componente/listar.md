@@ -1,6 +1,6 @@
 # Listar componente — GET
 
-El listado de prueba muestra tres componente estáticos: Bulbsaur, Charmander y Squirtle.
+El listado inicial muestra tres componentes de ejemplo: Lenovo, Forgeon y Windows-10.
 
 ## Cómo probarlo
 

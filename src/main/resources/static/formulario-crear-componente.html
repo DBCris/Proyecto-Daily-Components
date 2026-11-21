@@ -13,11 +13,21 @@
         <br><br>
 
         <label for="tipo">Tipo:</label>
-        <select id="tipo" name="tipo" required>
-            <option value="">-- Selecciona un tipo de componente--</option>
-            <option value="Sobremesa">Sobremesa</option>
-            <option value="Portátil">Portátil</option>
-        </select>
+            <select id="tipo" name="tipo" required>
+                <option value="">-- Selecciona un tipo de componente --</option>
+                <option value="Sobremesa">Sobremesa</option>
+                <option value="Portátil">Portátil</option>
+                <option value="CPU">Procesador</option>
+                <option value="GPU">Tarjeta gráfica</option>
+                <option value="RAM">Memoria RAM</option>
+                <option value="Placa base">Placa base</option>
+                <option value="Almacenamiento">Almacenamiento</option>
+                <option value="Fuente de alimentación">Fuente de alimentación</option>
+                <option value="Refrigeración">Refrigeración</option>
+                <option value="Caja">Caja</option>
+                <option value="Monitor">Monitor</option>
+                <option value="Licencia">Licencia</option>
+            </select>
         <br><br>
 
         <label for="foto">Foto (URL):</label>
@@ -26,7 +36,7 @@
 
         <label for="precio">Precio (€):</label>
         <input type="number" id="precio" name="precio"
-               step="0.01" min="0" required>
+               step="0.01" min="0" max="6000" required>
         <br><br>
 
         <button type="submit">Crear Componente</button>
