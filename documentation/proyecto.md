@@ -47,6 +47,6 @@ Uno de los problemas fue la validación del nombre, ya que al principio no permi
 También hemos ampliado las opciones del formulario para poder seleccionar distintos tipos de componentes, como CPU, GPU o RAM.
 
 
-## 6. Referencias
+## 6. Fuentes consultadas
 
-- Apuntes y prácticas de DWES RA5.
+- Material de clase sobre desarrollo de aplicaciones web con Java y Spring Boot.
