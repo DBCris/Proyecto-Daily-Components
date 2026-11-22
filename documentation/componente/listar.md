@@ -1,12 +1,12 @@
 # Listar componente — GET
 
-El listado de prueba muestra tres componente estáticos: Bulbsaur, Charmander y Squirtle.
+El listado inicial muestra tres componentes de ejemplo: Lenovo, Forgeon y Windows-10.
 
 ## Cómo probarlo
 
 1. Iniciar `StoreApplication.java`.
 2. Abrir <http://localhost:8080/componentes>.
-3. El Controller devuelve una página HTML con los tres componente.
+3. El Controller devuelve una página HTML con los tres componentes.
 
 <img src="./images/listaComponentes.png">
 

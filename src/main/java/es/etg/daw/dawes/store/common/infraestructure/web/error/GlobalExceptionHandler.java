@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import es.etg.daw.dawes.store.componente.domain.error.EntityNotFoundException.EntityNotFoundException;
+
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -27,13 +29,25 @@ public class GlobalExceptionHandler {
                 .body(html);
 	}
 
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<String> entityNotFoundHandler(EntityNotFoundException ex) {
+        return buildResponse(HttpStatus.NOT_FOUND, ex.getMessage());
+    }
+
+    private ResponseEntity<String> buildResponse(HttpStatus status, String msg) {
+        CustomResponse cr = new CustomResponse(LocalDateTime.now(), status, msg);
+        return ResponseEntity
+                .status(status)
+                .contentType(MediaType.TEXT_HTML)
+                .body(buildErrorHtml(cr));
+    }
     private String buildErrorHtml(CustomResponse cr) {
         return """
                 <!DOCTYPE html>
                 <html lang="es">
                 <head>
                     <meta charset="UTF-8">
-                    <title>Error interno en el servidor</title>
+                    <title>Error</title>
                 </head>
                 <body>
                     <div class="card">

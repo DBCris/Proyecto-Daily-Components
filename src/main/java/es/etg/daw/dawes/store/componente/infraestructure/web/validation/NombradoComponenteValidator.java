@@ -5,15 +5,14 @@ import jakarta.validation.ConstraintValidatorContext;
 
 public class NombradoComponenteValidator implements ConstraintValidator<NombradoComponente, String>{
 
-    public final static String STR_BLANCO = " ";
     public final static String STR_SALTO = "\n";
 
     @Override
     public boolean isValid(String value, ConstraintValidatorContext context) {
         /* Vamos a validar el campo nombre aplicando las siguientes normas:
-        *  No es nulo, vacío, ni tiene blancos
+        *  No es nulo, vacío, ni tiene saltos
         */
-        if(value == null || value.length()==0 || value.contains(STR_BLANCO) || value.contains(STR_SALTO))
+        if(value == null || value.length()==0 || value.isBlank() || value.contains(STR_SALTO))
             return false;
         
         return true;
