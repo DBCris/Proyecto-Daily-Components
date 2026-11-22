@@ -8,6 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+import es.etg.daw.dawes.store.componente.domain.error.EntityNotFoundException.EntityNotFoundException;
+
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -45,7 +47,7 @@ public class GlobalExceptionHandler {
                 <html lang="es">
                 <head>
                     <meta charset="UTF-8">
-                    <title>Error interno en el servidor</title>
+                    <title>Error</title>
                 </head>
                 <body>
                     <div class="card">
